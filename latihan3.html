@@ -23,16 +23,37 @@
 
 <! --style untuk mendesain garis website  -->
 <style>
-	.container {
-		display: flex;
-		height: 100vh;
-		margin-bottom: 1px;
-	}
+	body {
+            background-color: #ffc2d1;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-	.left, .right {
-		flex: 1;
-		padding: 20px;
-	}
+        h1, h2, p, address {
+            margin: 10px; /* Jarak yang konsisten */
+            padding: 10px; /* Padding untuk semua elemen */
+            text-align: center; /* Rata tengah untuk judul dan paragraf */
+        }
+
+        h1 {
+            background-color: #ff33b8;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Membuat kontainer fleksibel */
+            margin: 10px; /* Jarak antar kontainer */
+            padding: 10px; /* Padding di dalam kontainer */
+        }
+
+        .left, .right {
+            flex: 1;
+            min-width: 300px; /* Minimal lebar untuk setiap kolom */
+            padding: 20px;
+            background-color: whitesmoke;
+            margin: 5px; /* Jarak antar elemen dalam kontainer */
+        }
 
 	.left {
 		background-color: whitesmoke;
@@ -42,10 +63,22 @@
 		background-color: whitesmoke;
 	}
 
-	.divider {
-		width: 1px;
-		background-color: black;
-	}
+        .divider {
+            width: 1px;
+            background-color: black;
+        }
+
+        img {
+            max-width: 100%; /* Responsif untuk gambar */
+            height: auto; /* Mempertahankan rasio gambar */
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Mengatur kontainer menjadi kolom pada layar kecil */
+            }
+        }
+	
 </style>
 </head>
 <! --body untuk mengetahui rekomendasi menu gacoan  -->
